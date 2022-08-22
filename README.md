@@ -1,5 +1,5 @@
 # ESPHome Configuration for the AirGradient DIY Pro
-This is an example of ESPHome Configuration for the Airgradient DIY Pro (https://www.airgradient.com/open-airgradient/instructions/diy-pro/), with the SGP30 TVOC sensor added.
+This is an example of ESPHome Configuration for the [Airgradient DIY Pro](https://www.airgradient.com/open-airgradient/instructions/diy-pro/), with the SGP30 TVOC sensor added.
 
 It displays the sensor data on the onbaord OLED screen, and logs it to the specified MQTT broker.
 
