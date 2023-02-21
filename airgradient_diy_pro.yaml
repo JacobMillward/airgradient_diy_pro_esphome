@@ -31,25 +31,32 @@ sensor:
     pm_1_0:
       name: "Particulate Matter <1.0µm Concentration"
       id: pm1
+      filters:
+        - throttle: 10s
     pm_2_5:
       name: "Particulate Matter <2.5µm Concentration"
       id: pm25
+      filters:
+        - throttle: 10s
     pm_10_0:
       name: "Particulate Matter <10.0µm Concentration"
       id: pm10
+      filters:
+        - throttle: 10s
 
-    pm_0_3um:
-      name: pm_0_3um
-    pm_0_5um:
-      name: pm_0_5um
-    pm_1_0um:
-      name: pm_1_0um
-    pm_2_5um:
-      name: pm_2_5um
-    pm_5_0um:
-      name: pm_5_0um
-    pm_10_0um:
-      name: pm_10_0um
+    # Uncomment to enable
+    # pm_0_3um:
+    #   name: pm_0_3um
+    # pm_0_5um:
+    #   name: pm_0_5um
+    # pm_1_0um:
+    #   name: pm_1_0um
+    # pm_2_5um:
+    #   name: pm_2_5um
+    # pm_5_0um:
+    #   name: pm_5_0um
+    # pm_10_0um:
+    #   name: pm_10_0um
 
     uart_id: pms5003
 
@@ -61,13 +68,13 @@ sensor:
       name: "Humidity"
       id: humid
     address: 0x44
-    update_interval: 30s
+    update_interval: 20s
 
   - platform: senseair
     co2:
       name: "CO2"
       id: co2
-    update_interval: 5s
+    update_interval: 10s
     uart_id: SenseAir
 
   - platform: sgp30
@@ -75,10 +82,14 @@ sensor:
       name: "eCO2"
       id: eco2
       accuracy_decimals: 1
+      filters:
+        - throttle: 10s
     tvoc:
       name: "TVOC"
       id: tvoc
       accuracy_decimals: 1
+      filters:
+        - throttle: 10s
     store_baseline: yes
     address: 0x58
     update_interval: 1s
