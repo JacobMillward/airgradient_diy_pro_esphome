@@ -96,10 +96,9 @@ display:
 # Enable logging
 logger:
 
-mqtt:
-  broker: !secret mqtt_broker
-  username: !secret mqtt_username
-  password: !secret mqtt_password
+
+# Enable ESP native API
+api:
 
 ota:
   password: !secret ota_password
