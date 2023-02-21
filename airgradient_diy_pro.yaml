@@ -31,12 +31,18 @@ sensor:
     pm_1_0:
       name: "Particulate Matter <1.0µm Concentration"
       id: pm1
+      filters:
+        - throttle: 10s
     pm_2_5:
       name: "Particulate Matter <2.5µm Concentration"
       id: pm25
+      filters:
+        - throttle: 10s
     pm_10_0:
       name: "Particulate Matter <10.0µm Concentration"
       id: pm10
+      filters:
+        - throttle: 10s
 
     # Uncomment to enable
     # pm_0_3um:
