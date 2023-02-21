@@ -62,13 +62,13 @@ sensor:
       name: "Humidity"
       id: humid
     address: 0x44
-    update_interval: 30s
+    update_interval: 20s
 
   - platform: senseair
     co2:
       name: "CO2"
       id: co2
-    update_interval: 5s
+    update_interval: 10s
     uart_id: SenseAir
 
   - platform: sgp30
@@ -76,10 +76,14 @@ sensor:
       name: "eCO2"
       id: eco2
       accuracy_decimals: 1
+      filters:
+        - throttle: 10s
     tvoc:
       name: "TVOC"
       id: tvoc
       accuracy_decimals: 1
+      filters:
+        - throttle: 10s
     store_baseline: yes
     address: 0x58
     update_interval: 1s
