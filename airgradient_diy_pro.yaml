@@ -38,18 +38,19 @@ sensor:
       name: "Particulate Matter <10.0µm Concentration"
       id: pm10
 
-    pm_0_3um:
-      name: pm_0_3um
-    pm_0_5um:
-      name: pm_0_5um
-    pm_1_0um:
-      name: pm_1_0um
-    pm_2_5um:
-      name: pm_2_5um
-    pm_5_0um:
-      name: pm_5_0um
-    pm_10_0um:
-      name: pm_10_0um
+    # Uncomment to enable
+    # pm_0_3um:
+    #   name: pm_0_3um
+    # pm_0_5um:
+    #   name: pm_0_5um
+    # pm_1_0um:
+    #   name: pm_1_0um
+    # pm_2_5um:
+    #   name: pm_2_5um
+    # pm_5_0um:
+    #   name: pm_5_0um
+    # pm_10_0um:
+    #   name: pm_10_0um
 
     uart_id: pms5003
 
