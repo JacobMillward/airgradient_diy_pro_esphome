@@ -23,6 +23,7 @@ i2c:
   sda: D2
   scl: D1
   scan: false
+  frequency: 400kHz
 
 sensor:
   - platform: pmsx003
@@ -98,6 +99,7 @@ display:
   - platform: ssd1306_i2c
     model: "SH1106 128x64"
     address: 0x3C
+    update_interval: 5s
     lambda: |-
       it.printf(0, 0, id(opensans), "%.1f°C", id(temp).state );
       it.printf(50, 0, id(opensans), "HUM: %.1f%%", id(humid).state );
